@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fazenda.Control_Gerenciar_Usuarios">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Vacas">
+            <items>
+              <MenuItem fx:id="registrarProducaoVaca" mnemonicParsing="false" onAction="#abrirRegistroProducao" text="Registrar produção de Vaca" />
+                  <MenuItem fx:id="cadastrarVaca" mnemonicParsing="false" onAction="#abrirCadastroVacas" text="Cadastrar Vaca" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Usuário">
+            <items>
+              <MenuItem fx:id="registrarUsuario" mnemonicParsing="false" onAction="#abrirCadastroUsuario" text="Registrar Usuário" />
+                  <MenuItem fx:id="gerenciarUsuarios" mnemonicParsing="false" text="Gerenciar Usuários" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Produção">
+            <items>
+              <MenuItem fx:id="consultarProducaoVaca" mnemonicParsing="false" onAction="#abrirConsultarProducaoVaca" text="Consultar Produção de Vaca" />
+                  <MenuItem fx:id="consultarProducaoPeriodo" mnemonicParsing="false" onAction="#abrirConsultarProducaoPeriodo" text="Consultar Produção por Período" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="476.0" layoutY="296.0" mnemonicParsing="false" onAction="#alterar" text="Alterar" />
+      <Label layoutX="163.0" layoutY="53.0" text="GERENCIAMENTO DE USUÁRIOS">
+         <font>
+            <Font name="Dubai Bold" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabela" layoutX="24.0" layoutY="87.0" prefHeight="275.0" prefWidth="288.0">
+        <columns>
+          <TableColumn fx:id="colunaUsuario" prefWidth="91.19997787475586" text="Usuário" />
+            <TableColumn fx:id="colunaEmail" prefWidth="196.8000030517578" text="Login" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="campoUsuario" layoutX="412.0" layoutY="136.0" onAction="#carregaDadosUsuario" prefHeight="26.0" prefWidth="162.0" />
+      <Label layoutX="438.0" layoutY="106.0" text="Selecionar Usuário">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="217.0" text="Senha" />
+      <Label layoutX="322.0" layoutY="255.0" text="Repita a senha" />
+      <PasswordField fx:id="campoSenha1" layoutX="412.0" layoutY="213.0" prefHeight="26.0" prefWidth="162.0" />
+      <PasswordField fx:id="campoSenha2" layoutX="412.0" layoutY="251.0" prefHeight="26.0" prefWidth="162.0" />
+      <Label layoutX="361.0" layoutY="178.0" text="Email" />
+      <TextField fx:id="campoEmail" layoutX="413.0" layoutY="174.0" prefHeight="26.0" prefWidth="161.0" />
+   </children>
+</AnchorPane>

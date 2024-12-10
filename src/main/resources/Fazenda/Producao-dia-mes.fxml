@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fazenda.Control_Busca_ProducaoPeriodo">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="22.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Vacas">
+            <items>
+              <MenuItem fx:id="registrarProducaoVaca" mnemonicParsing="false" onAction="#abrirRegistroProducao" text="Registrar produção de Vaca" />
+                  <MenuItem fx:id="cadastrarVaca" mnemonicParsing="false" onAction="#abrirCadastroVacas" text="Cadastrar Vaca" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Usuário">
+            <items>
+              <MenuItem fx:id="registrarUsuario" mnemonicParsing="false" onAction="#abrirCadastroUsuario" text="Registrar Usuário" />
+                  <MenuItem fx:id="gerenciarUsuarios" mnemonicParsing="false" onAction="#abrirGerenciadorUsuarios" text="Gerenciar Usuários" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Produção">
+            <items>
+              <MenuItem fx:id="consultarProducaoVaca" mnemonicParsing="false" onAction="#abrirConsultarProducaoVaca" text="Consultar Produção Vaca" />
+                  <MenuItem fx:id="consultarProducaoPeriodo" mnemonicParsing="false" text="Consultar Produção Período" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="196.0" layoutY="76.0" text="PRODUÇÕES POR PERÍODO">
+         <font>
+            <Font name="Dubai Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="139.0" text="Fim" />
+      <TextField fx:id="campoProducaoTotal" layoutX="234.0" layoutY="225.0" />
+      <DatePicker fx:id="campoDataInicial" layoutX="113.0" layoutY="135.0" />
+      <Label layoutX="244.0" layoutY="200.0" text="Produção no período">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <DatePicker fx:id="campoDataFinal" layoutX="358.0" layoutY="135.0" />
+      <Label layoutX="81.0" layoutY="139.0" text="Inicio" />
+      <Button layoutX="283.0" layoutY="266.0" mnemonicParsing="false" onAction="#Buscar" text="Buscar" />
+   </children>
+</AnchorPane>

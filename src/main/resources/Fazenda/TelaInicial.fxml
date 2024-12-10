@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fazenda.Control_TelaInicial">
+   <children>
+      <Button layoutX="314.0" layoutY="245.0" mnemonicParsing="false" onAction="#Entrar" text="Entrar" />
+      <Label layoutX="286.0" layoutY="67.0" text="LOGIN">
+         <font>
+            <Font name="Dubai Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="217.0" layoutY="178.0" text="Senha" />
+      <PasswordField fx:id="campoSenha" layoutX="263.0" layoutY="174.0" />
+      <TextField fx:id="campoLogin" layoutX="263.0" layoutY="130.0" />
+      <Label layoutX="219.0" layoutY="134.0" text="Login" />
+   </children>
+</AnchorPane>

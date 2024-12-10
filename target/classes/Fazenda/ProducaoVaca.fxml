@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fazenda.Control_Busca_ProducaoVaca">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="22.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Vacas">
+            <items>
+              <MenuItem fx:id="registrarProducaoVaca" mnemonicParsing="false" onAction="#abrirRegistroProducao" text="Registrar produção de Vaca" />
+                  <MenuItem fx:id="cadastrarVaca" mnemonicParsing="false" onAction="#abrirCadastroVacas" text="Cadastrar Vaca" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Usuário">
+            <items>
+              <MenuItem fx:id="registrarUsuario" mnemonicParsing="false" onAction="#abrirCadastroUsuario" text="Registrar Usuário" />
+                  <MenuItem fx:id="gerenciarUsuarios" mnemonicParsing="false" onAction="#abrirGerenciadorUsuarios" text="Gerenciar Usuários" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Produção">
+            <items>
+              <MenuItem fx:id="consultarProducaoVaca" mnemonicParsing="false" text="Consultar Produção Vaca" />
+                  <MenuItem fx:id="consultarProducaoPeriodo" mnemonicParsing="false" onAction="#abrirConsultarProducaoPeriodo" text="Consultar Produção Período" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="283.0" layoutY="330.0" mnemonicParsing="false" onAction="#BuscarProducao" text="Buscar" />
+      <Label layoutX="55.0" layoutY="142.0" text="Brinco" />
+      <Label layoutX="223.0" layoutY="48.0" text="BUSCA DE PRODUÇÃO">
+         <font>
+            <Font name="Dubai Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="198.0" text="Nome" />
+      <Label layoutX="64.0" layoutY="247.0" text="Raça" />
+      <ComboBox fx:id="campoBrinco" layoutX="115.0" layoutY="138.0" onAction="#carregaNomeRaca" prefWidth="150.0" />
+      <Label layoutX="411.0" layoutY="164.0" text="Produção do dia" />
+      <Label layoutX="443.0" layoutY="97.0" text="Data" />
+      <DatePicker fx:id="campoData" layoutX="368.0" layoutY="125.0" />
+      <TextField fx:id="campoRaca" layoutX="115.0" layoutY="243.0" />
+      <Label layoutX="409.0" layoutY="216.0" text="Produção do mês" />
+      <TextField fx:id="campoProducaoDia" layoutX="380.0" layoutY="181.0" />
+      <TextField fx:id="campoProducaoMes" layoutX="380.0" layoutY="243.0" />
+      <ComboBox fx:id="campoNome" layoutX="114.0" layoutY="194.0" onAction="#carregaBrincoRaca" prefWidth="150.0" />
+      <Label layoutX="146.0" layoutY="97.0" text="Dados da vaca">
+         <font>
+            <Font name="Dubai Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoProducaoVida" layoutX="382.0" layoutY="298.0" />
+      <Label layoutX="413.0" layoutY="280.0" text="Produção em vida" />
+   </children>
+</AnchorPane>
